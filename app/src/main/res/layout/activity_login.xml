@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            app:layout_constraintVertical_chainStyle="packed"
+            android:id="@+id/tv_1"
+            android:text="@string/e_mail"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="@+id/btn_create_login"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/edt_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:hint="@string/e_mail"
+            android:id="@+id/edt_email"
+            app:layout_constraintLeft_toLeftOf="@+id/tv_1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintRight_toRightOf="parent"
+            android:importantForAutofill="no"
+            app:layout_constraintBottom_toTopOf="@+id/tv_password"
+            android:inputType="textEmailAddress" />
+
+        <TextView
+            android:id="@+id/tv_password"
+            app:layout_constraintTop_toBottomOf="@+id/edt_email"
+            android:text="@string/password"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="@+id/tv_1"
+            app:layout_constraintBottom_toTopOf="@+id/edt_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:hint="@string/password"
+            android:id="@+id/edt_password"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/btn_login"
+            app:layout_constraintLeft_toLeftOf="@+id/tv_password"
+            app:layout_constraintTop_toBottomOf="@+id/tv_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAutofill="no"
+            android:inputType="textPassword" />
+
+        <Button
+            android:layout_marginTop="60dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_create_login"
+            android:id="@+id/btn_login"
+            android:text="@string/login"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/btn_create_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create_new_account"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
